@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résumé HTML & CSS - Info Mines</title>
+    <link rel="stylesheet" href="resume.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <h1>Résumé Pratique HTML/CSS</h1>
+        <nav>
+            <ul>
+                <li><a href="#texte">Texte</a></li>
+                <li><a href="#boxmodel">Box Model</a></li>
+                <li><a href="#layout">Layout (Flex)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="texte" class="card">
+            <h2>Les Bases du Texte</h2>
+            <p>Ceci est un paragraphe <code>&lt;p&gt;</code>. Il contient du texte <strong>important (gras)</strong> avec la balise <code>&lt;strong&gt;</code> et du texte <em>emphatique (italique)</em> avec <code>&lt;em&gt;</code>.</p>
+            
+            <p>On peut aussi faire un <br> saut de ligne avec <code>&lt;br&gt;</code>.</p>
+            
+            <p>Voici un <span class="highlight">span stylisé</span> au milieu d'une phrase.</p>
+            
+            <div class="media-content">
+                <a href="https://frontend.info-mines.paris/" target="_blank">Ceci est un lien &lt;a&gt; vers le cours</a>
+                <img src="https://via.placeholder.com/150" alt="Image exemple">
+            </div>
+        </section>
+
+        <section id="boxmodel" class="card">
+            <h2>Sélecteurs & Box Model</h2>
+            <div class="box-demonstration">
+                <p>Cette boîte démontre le modèle de boîte CSS :</p>
+                <ul>
+                    <li><strong>Content :</strong> Le texte ici</li>
+                    <li><strong>Padding :</strong> Espace intérieur (vert)</li>
+                    <li><strong>Border :</strong> Bordure (noir)</li>
+                    <li><strong>Margin :</strong> Espace extérieur (orange)</li>
+                </ul>
+            </div>
+            
+            <p class="note">Ceci utilise une <strong>classe</strong> (<code>.note</code>).</p>
+            <p id="unique-element">Ceci utilise un <strong>ID</strong> (<code>#unique-element</code>).</p>
+        </section>
+
+        <section id="layout" class="card">
+            <h2>Mise en page (Layout)</h2>
+            <p>Démonstration de <code>display: flex</code> sur le conteneur ci-dessous :</p>
+            
+            <div class="flex-container">
+                <div class="flex-item">Item 1</div>
+                <div class="flex-item">Item 2</div>
+                <div class="flex-item">Item 3</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - Résumé Info Mines</p>
+    </footer>
+
+    <div id="fixed-badge">Fixed</div>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+/* -----------------------------------------------------------
+   1. RESET & BASES
+   Toujours commencer par box-sizing pour simplifier les calculs de taille
+----------------------------------------------------------- */
+* {
+    box-sizing: border-box; /* Inclut padding et border dans la largeur totale */
+}
+
+body {
+    margin: 0; /* Enlève les marges par défaut du navigateur */
+    font-family: 'Arial', sans-serif; /* Police par défaut */
+    background-color: #f4f4f9; /* Couleur de fond de la page (gris très clair) */
+    color: #333; /* Couleur du texte (gris foncé) */
+    line-height: 1.6; /* Hauteur de ligne pour la lisibilité */
+}
+
+/* -----------------------------------------------------------
+   2. HEADER & NAVIGATION (Flexbox)
+----------------------------------------------------------- */
+.main-header {
+    background-color: #2c3e50; /* Bleu foncé */
+    color: white;
+    padding: 1rem 2rem; /* 1rem = taille de police par défaut (souvent 16px) */
+    
+    /* UTILISATION DE FLEXBOX pour aligner Titre et Menu */
+    display: flex; 
+    justify-content: space-between; /* Espace max entre les éléments */
+    align-items: center; /* Centrage vertical */
+}
+
+.main-header ul {
+    list-style: none; /* Enlève les puces de la liste */
+    display: flex; /* Met les liens côte à côte */
+    gap: 20px; /* Espace entre les liens */
+    margin: 0;
+    padding: 0;
+}
+
+.main-header a {
+    color: white;
+    text-decoration: none; /* Enlève le soulignement */
+    font-weight: bold;
+    transition: color 0.3s; /* Transition fluide au survol */
+}
+
+/* Pseudo-classe :hover (quand on passe la souris) */
+.main-header a:hover {
+    color: #3498db; /* Bleu clair */
+}
+
+/* -----------------------------------------------------------
+   3. STRUCTURE PRINCIPALE (Marge auto pour centrer)
+----------------------------------------------------------- */
+main {
+    max-width: 800px; /* Largeur max */
+    margin: 2rem auto; /* Haut/Bas: 2rem, Gauche/Droite: auto (centre le bloc) */
+    padding: 0 1rem;
+}
+
+/* Style des cartes (Sections) */
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Coins arrondis */
+    padding: 20px;
+    margin-bottom: 20px; /* Marge externe en bas */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Ombre légère */
+}
+
+h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db; /* Ligne sous le titre */
+    padding-bottom: 10px;
+}
+
+/* -----------------------------------------------------------
+   4. SPECIFIQUE : FORMATAGE TEXTE
+----------------------------------------------------------- */
+code {
+    background-color: #eee;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-family: monospace;
+    color: #c7254e;
+}
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+    border: 1px dashed orange;
+}
+
+.media-content img {
+    max-width: 100%; /* L'image ne dépassera jamais son conteneur */
+    margin-top: 10px;
+    display: block; /* Force l'image à aller à la ligne */
+}
+
+/* -----------------------------------------------------------
+   5. BOX MODEL DEMONSTRATION
+----------------------------------------------------------- */
+.box-demonstration {
+    background-color: #e8f6f3; /* Fond contenu */
+    width: 80%; /* Largeur */
+    
+    /* LE BOX MODEL EN ACTION */
+    padding: 20px;       /* Espace interne */
+    border: 5px solid #2c3e50; /* Bordure */
+    margin: 20px auto;   /* Espace externe (auto pour centrer) */
+}
+
+.note {
+    font-style: italic;
+    color: #7f8c8d;
+}
+
+#unique-element {
+    color: purple;
+    font-weight: bold;
+    text-align: right; /* Aligner le texte à droite */
+}
+
+/* -----------------------------------------------------------
+   6. LAYOUT FLEXBOX AVANCE
+----------------------------------------------------------- */
+.flex-container {
+    display: flex; /* Active Flexbox */
+    background-color: #ddd;
+    padding: 10px;
+    gap: 10px; /* Espace entre les enfants flex */
+    
+    /* Essayer : row, column, row-reverse */
+    flex-direction: row; 
+}
+
+.flex-item {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    flex: 1; /* Chaque item prend la même largeur disponible */
+}
+
+.flex-item:nth-child(2) {
+    background-color: #e74c3c; /* Change la couleur du 2ème item */
+}
+
+/* -----------------------------------------------------------
+   7. FOOTER & POSITIONNEMENT FIXE
+----------------------------------------------------------- */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 50px;
+}
+
+#fixed-badge {
+    position: fixed; /* Reste fixe même quand on scroll */
+    bottom: 20px;
+    right: 20px;
+    background-color: #e74c3c;
+    color: white;
+    padding: 15px;
+    border-radius: 50%; /* Cercle parfait */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    font-weight: bold;
+    cursor: pointer; /* Change le curseur en main */
+}
